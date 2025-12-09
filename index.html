@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixLab | Sydney's Fastest Mobile Phone Repair Service</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">⚡ FixLab</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#accessories">Accessories</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <a href="about.html">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="section hero section-alt">
+      <div class="container grid grid-2 hero-grid">
+        <div class="hero-copy animate-fade-up">
+          <p class="eyebrow">FIXLAB – WE COME TO YOU! (Sydney-Wide)</p>
+          <h1>Sydney’s Fastest Mobile Phone Repair Service</h1>
+          <p class="lead">Powered by Speed. Driven by Precision.<br>We fix your iPhone or Samsung on the spot — wherever you are.</p>
+          <p class="muted">Home, office, job site or roadside — our technician comes to you and repairs your device within minutes, not hours.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Book a Repair</a>
+            <a class="btn btn-outline" href="#pricing">Get a Free Quote</a>
+          </div>
+          <ul class="pill-list">
+            <li>✔ On-Site Repairs</li>
+            <li>✔ 12-Month Warranty</li>
+            <li>✔ Upfront Pricing</li>
+            <li>✔ Premium Parts</li>
+          </ul>
+          <div class="banner card-highlight">
+            <p class="banner-title">Cracked screen? Battery dying? Charging port not working?</p>
+            <p>We repair your iPhone or Samsung on the spot – at your home, office or anywhere in Sydney.</p>
+            <p class="muted">iPhone Screens from $140 • Samsung Screens from $160</p>
+            <p class="strong">⚡ Fast. Clean. Professional.</p>
+          </div>
+        </div>
+        <div class="hero-card animate-fade-up">
+          <div class="card card-strong floating-card">
+            <div class="card-header">
+              <p class="eyebrow">Instant Quote</p>
+              <p class="muted">Quote Guarantee: the price we give is the final price. No hidden fees.</p>
+            </div>
+            <form class="quote-form" id="quote-form">
+              <label>Brand
+                <select name="brand" required>
+                  <option value="">Select brand</option>
+                  <option value="iPhone">Apple iPhone</option>
+                  <option value="Samsung">Samsung Galaxy</option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+              <label>Model
+                <input type="text" name="model" placeholder="e.g., iPhone 14 Pro" required>
+              </label>
+              <label>Issue
+                <select name="issue" required>
+                  <option value="">Select issue</option>
+                  <option>Screen</option>
+                  <option>Battery</option>
+                  <option>Charging Port</option>
+                  <option>Camera</option>
+                  <option>Water Damage</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>Suburb / Postcode
+                <input type="text" name="suburb" placeholder="e.g., Parramatta 2150" required>
+              </label>
+              <button class="btn btn-primary btn-block" type="submit">Get Instant Quote</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <p class="eyebrow">Built for busy Sydneysiders</p>
+          <h2>Why Choose FixLab?</h2>
+          <p class="muted">Precision mobile repairs that meet you where you are.</p>
+        </div>
+        <div class="grid grid-4 feature-grid">
+          <div class="card card-soft animate-fade-up">
+            <div class="icon-pill">🚀</div>
+            <h3>We Come to You</h3>
+            <p>Mobile technician arrives anywhere in Sydney.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <div class="icon-pill">⚡</div>
+            <h3>Fast Repairs</h3>
+            <p>20–40 minutes for most screens and batteries.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <div class="icon-pill">🛡️</div>
+            <h3>Premium Parts</h3>
+            <p>Backed by a 12-month warranty.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <div class="icon-pill">💳</div>
+            <h3>Upfront Pricing</h3>
+            <p>No hidden fees. Fixed quotes you can trust.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <p class="eyebrow">Our Services</p>
+          <h2>Everything your phone needs</h2>
+          <p class="muted">From cracked screens to full diagnostics, we've got you covered.</p>
+        </div>
+        <div class="grid grid-3 service-grid">
+          <div class="card card-strong animate-fade-up">
+            <div class="icon-pill">📱</div>
+            <h3>iPhone Repairs</h3>
+            <p>We repair every model from iPhone 6 to iPhone 15 Pro Max.</p>
+            <ul class="list">
+              <li>Screen Replacement</li>
+              <li>Battery Replacement</li>
+              <li>Back Glass Repair</li>
+              <li>Charging Port Repair</li>
+              <li>Camera & Lens Replacement</li>
+              <li>Water Damage Diagnostic</li>
+            </ul>
+            <p class="price">From $140</p>
+          </div>
+          <div class="card card-strong animate-fade-up">
+            <div class="icon-pill">📲</div>
+            <h3>Samsung Repairs</h3>
+            <p>Galaxy A, S, Note &amp; Z-Series.</p>
+            <ul class="list">
+              <li>Screen Replacement</li>
+              <li>Battery Replacement</li>
+              <li>Back Glass</li>
+              <li>Charging Port</li>
+              <li>Camera Module</li>
+              <li>Water Damage Diagnostic</li>
+            </ul>
+            <p class="price">From $160</p>
+          </div>
+          <div class="card card-strong animate-fade-up">
+            <div class="icon-pill">🧭</div>
+            <h3>On-Site Service &amp; Diagnostic</h3>
+            <p>Your location. Your time. We come to you anywhere in Sydney — home, office, hospital, café, university campus, warehouse, or job site.</p>
+            <p class="muted">Diagnostic Service: Not sure what’s wrong? We perform a full diagnostic for $70, credited towards your repair if you proceed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="coverage">
+      <div class="container grid grid-2 coverage-grid">
+        <div class="animate-fade-up">
+          <p class="eyebrow">Sydney-Wide Coverage</p>
+          <h2>We reach you anywhere</h2>
+          <p class="muted">If you’re in Sydney, we can repair it on the spot.</p>
+          <div class="tag-list">
+            <span>Sydney CBD</span>
+            <span>Inner West</span>
+            <span>Eastern Suburbs</span>
+            <span>North Shore</span>
+            <span>Parramatta &amp; West</span>
+            <span>Hills District</span>
+            <span>South West Sydney</span>
+            <span>Northern Beaches</span>
+          </div>
+          <p class="muted">Arrival time usually 30–90 minutes depending on location.</p>
+        </div>
+        <div class="card card-soft map-card animate-fade-up">
+          <p class="muted">Map placeholder — add your service area map here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <p class="eyebrow">Upfront, Transparent Pricing</p>
+          <h2>Know the cost before we arrive</h2>
+        </div>
+        <div class="grid grid-3 pricing-grid">
+          <div class="card card-soft animate-fade-up">
+            <h3>iPhone Screen Replacement</h3>
+            <p class="muted">From $140–$340 depending on model.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <h3>Samsung Screen Replacement</h3>
+            <p class="muted">From $160–$420 depending on model.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <h3>Battery Replacement</h3>
+            <p class="muted">From $100–$160.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <h3>Back Glass Repair</h3>
+            <p class="muted">From $180–$260.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <h3>Charging Port / Camera</h3>
+            <p class="muted">From $130–$190.</p>
+          </div>
+          <div class="card card-highlight animate-fade-up">
+            <h3>Quote Guarantee</h3>
+            <p class="muted">The price given before booking is final — no hidden fees.</p>
+            <a class="btn btn-primary" href="#contact">Get My Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="accessories">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <p class="eyebrow">Premium Mobile Accessories</p>
+          <h2>Curated gear for your devices</h2>
+          <p class="muted">Cases, cables, chargers, screen protectors and more.</p>
+        </div>
+        <div id="products-grid" class="grid grid-3 products-grid animate-fade-up"></div>
+        <p class="note animate-fade-up">* All prices and availability are subject to change. Updated via the FixLab admin panel.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="how-it-works">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <p class="eyebrow">How it Works</p>
+          <h2>Repairs made effortless</h2>
+        </div>
+        <div class="grid grid-4 steps-grid">
+          <div class="card card-soft animate-fade-up">
+            <div class="step-number">1</div>
+            <h3>Book Your Repair</h3>
+            <p>Choose your device, issue, and location.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <div class="step-number">2</div>
+            <h3>We Come to You</h3>
+            <p>Technician arrives at your chosen location.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <div class="step-number">3</div>
+            <h3>Fast On-Site Repair</h3>
+            <p>Usually 20–40 minutes using premium parts.</p>
+          </div>
+          <div class="card card-soft animate-fade-up">
+            <div class="step-number">4</div>
+            <h3>Pay &amp; Get Your Warranty</h3>
+            <p>Pay on completion and receive a 12-month warranty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <p class="eyebrow">FAQ</p>
+          <h2>Answers to common questions</h2>
+        </div>
+        <div class="faq-list animate-fade-up">
+          <details>
+            <summary>How long does a repair take?</summary>
+            <p>Most screen or battery repairs take 20–40 minutes on-site.</p>
+          </details>
+          <details>
+            <summary>Do you come to my suburb?</summary>
+            <p>Yes. We cover Sydney-wide. If you’re in Sydney, we’ll come to you.</p>
+          </details>
+          <details>
+            <summary>Do you offer warranty?</summary>
+            <p>Every repair includes a 12-month warranty on parts and workmanship.</p>
+          </details>
+          <details>
+            <summary>Can I book today?</summary>
+            <p>Yes. Same-day bookings are available across Sydney, subject to parts.</p>
+          </details>
+          <details>
+            <summary>Do you use genuine parts?</summary>
+            <p>We use premium parts that meet or exceed original specifications.</p>
+          </details>
+          <details>
+            <summary>Do I pay before or after the repair?</summary>
+            <p>You pay after the repair is completed and you’re happy with the result.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact">
+      <div class="container grid grid-2 contact-grid">
+        <div class="animate-fade-up">
+          <p class="eyebrow">Contact FixLab</p>
+          <h2>Book Your Repair</h2>
+          <p class="muted">Sydney-Wide Mobile Service</p>
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> 1300 FIXLAB</li>
+            <li><strong>Email:</strong> support@fixlab.com.au</li>
+            <li><strong>Service Hours:</strong> 7 Days a Week — 8AM to 10PM</li>
+            <li><strong>Social:</strong> Instagram @fixlab.au • Facebook FixLab AU</li>
+          </ul>
+        </div>
+        <div class="card card-strong animate-fade-up">
+          <form id="contact-form" class="contact-form">
+            <label>Name
+              <input type="text" name="name" required>
+            </label>
+            <label>Phone number
+              <input type="tel" name="phone" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" required>
+            </label>
+            <label>Suburb
+              <input type="text" name="suburb" required>
+            </label>
+            <label>Device &amp; Issue
+              <textarea name="issue" rows="3" required></textarea>
+            </label>
+            <button class="btn btn-primary btn-block" type="submit">Send Booking Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p>© 2025 FixLab — Sydney’s Fastest Mobile Phone Repair Service</p>
+        <p class="muted">Powered by Speed. Driven by Precision.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#faq">Warranty</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

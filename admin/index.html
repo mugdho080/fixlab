@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixLab Admin | Products</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="section">
+    <div class="container">
+      <div class="card card-strong">
+        <div class="section-header" style="text-align:left; margin-bottom:24px;">
+          <p class="eyebrow">Admin helper</p>
+          <h1>Accessories Manager</h1>
+          <p class="muted">Load, edit, and export <code>products.json</code>. Remember to upload the downloaded file back to <code>assets/data/products.json</code>.</p>
+        </div>
+        <div class="admin-actions">
+          <button class="btn btn-outline" id="load-btn" type="button">Load products.json</button>
+          <button class="btn btn-primary" id="add-btn" type="button">Add Product</button>
+          <button class="btn btn-outline" id="download-btn" type="button">Download JSON</button>
+          <a class="btn btn-ghost" href="../index.html">← Back to site</a>
+        </div>
+        <div class="table-wrapper">
+          <table class="admin-table" id="products-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Device</th>
+                <th>Price</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="admin-note">Tip: double-click a cell to edit. Use Download JSON after changes, then replace <code>assets/data/products.json</code> with the new file.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
