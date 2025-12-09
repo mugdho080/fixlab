@@ -35,7 +35,7 @@
     <section class="section hero section-alt">
       <div class="container grid grid-2 hero-grid">
         <div class="hero-copy animate-fade-up">
-          <p class="eyebrow">FIXLAB – WE COME TO YOU! (Sydney-Wide)</p>
+          <div class="hero-badge">FIXLAB – WE COME TO YOU! (Sydney-Wide)</div>
           <h1>Sydney’s Fastest Mobile Phone Repair Service</h1>
           <p class="lead">Powered by Speed. Driven by Precision.<br>We fix your iPhone or Samsung on the spot — wherever you are.</p>
           <p class="muted">Home, office, job site or roadside — our technician comes to you and repairs your device within minutes, not hours.</p>
@@ -56,7 +56,12 @@
             <p class="strong">⚡ Fast. Clean. Professional.</p>
           </div>
         </div>
-        <div class="hero-card animate-fade-up">
+        <div class="hero-visual animate-fade-up">
+          <div class="hero-art">
+            <div class="hero-glow"></div>
+            <div class="hero-image" role="img" aria-label="FixLab technician placeholder"></div>
+            <p class="muted hero-placeholder-note">Placeholder visual — replace with your hero image in <code>assets/css/styles.css</code> (.hero-image)</p>
+          </div>
           <div class="card card-strong floating-card">
             <div class="card-header">
               <p class="eyebrow">Instant Quote</p>
@@ -240,8 +245,12 @@
           <h2>Curated gear for your devices</h2>
           <p class="muted">Cases, cables, chargers, screen protectors and more.</p>
         </div>
-        <div id="products-grid" class="grid grid-3 products-grid animate-fade-up"></div>
-        <p class="note animate-fade-up">* All prices and availability are subject to change. Updated via the FixLab admin panel.</p>
+        <div class="products-carousel-wrapper animate-fade-up">
+          <button class="carousel-btn prev" aria-label="Previous product">‹</button>
+          <div id="products-carousel" class="products-carousel"></div>
+          <button class="carousel-btn next" aria-label="Next product">›</button>
+        </div>
+        <p class="note animate-fade-up">* All prices and availability are subject to change. Updated via the FixLab admin panel (add your own product photos by pasting URLs or uploading images in the admin).</p>
       </div>
     </section>
 

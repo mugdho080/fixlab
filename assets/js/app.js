@@ -37,32 +37,115 @@
 
   // Load products
   async function loadProducts() {
-    const grid = document.getElementById('products-grid');
-    if (!grid) return;
-    grid.innerHTML = '<p class="muted">Loading accessories...</p>';
+    const carousel = document.getElementById('products-carousel');
+    if (!carousel) return;
+    carousel.innerHTML = '<p class="muted" style="padding:16px;">Loading accessories...</p>';
+    let items = [];
     try {
       const res = await fetch('assets/data/products.json');
       if (!res.ok) throw new Error('Network error');
-      const items = await res.json();
-      if (!Array.isArray(items) || !items.length) {
-        grid.innerHTML = '<p class="muted">No accessories available right now.</p>';
-        return;
-      }
-      grid.innerHTML = '';
-      items.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'card card-soft product-card';
-        card.innerHTML = `
+      items = await res.json();
+    } catch (err) {
+      carousel.innerHTML = '<p class="muted" style="padding:16px;">Could not load accessories. Please try again later.</p>';
+      console.error('Product load failed', err);
+      return;
+    }
+
+    if (!Array.isArray(items) || !items.length) {
+      carousel.innerHTML = '<p class="muted" style="padding:16px;">No accessories available right now.</p>';
+      return;
+    }
+
+    carousel.innerHTML = '';
+    const track = document.createElement('div');
+    track.className = 'carousel-track';
+    const dots = document.createElement('div');
+    dots.className = 'carousel-dots';
+    const slideGap = 16;
+    items.forEach((item, index) => {
+      const slide = document.createElement('div');
+      slide.className = 'card card-soft product-card';
+      const imgSrc = item.image || 'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=800&q=60';
+      slide.innerHTML = `
+        <img class="product-thumb" src="${imgSrc}" alt="${item.name || 'Accessory image'}">
+        <div>
           <h3>${item.name}</h3>
           <p class="muted">${item.category} • ${item.device}</p>
           <p class="price">${item.price}</p>
-        `;
-        grid.appendChild(card);
-      });
-    } catch (err) {
-      grid.innerHTML = '<p class="muted">Could not load accessories. Please try again later.</p>';
-      console.error('Product load failed', err);
+        </div>
+      `;
+      track.appendChild(slide);
+
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      if (index === 0) dot.classList.add('active');
+      dots.appendChild(dot);
+    });
+
+    carousel.appendChild(track);
+    carousel.parentElement.appendChild(dots);
+
+    const prevBtn = document.querySelector('.products-carousel-wrapper .prev');
+    const nextBtn = document.querySelector('.products-carousel-wrapper .next');
+    let current = 0;
+
+    function slidesPerView() {
+      const width = carousel.clientWidth;
+      if (width < 540) return 1;
+      if (width < 900) return 2;
+      return 3;
     }
+
+    function updateCarousel() {
+      const visible = slidesPerView();
+      const maxIndex = Math.max(0, items.length - visible);
+      current = Math.min(current, maxIndex);
+      const slideWidth = track.firstElementChild?.getBoundingClientRect().width || 0;
+      const offset = (slideWidth + slideGap) * current;
+      track.style.transform = `translateX(-${offset}px)`;
+      dots.querySelectorAll('button').forEach((btn, i) => {
+        btn.classList.toggle('active', i === current);
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => {
+      current = Math.max(0, current - 1);
+      updateCarousel();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      const visible = slidesPerView();
+      const maxIndex = Math.max(0, items.length - visible);
+      current = Math.min(maxIndex, current + 1);
+      updateCarousel();
+    });
+
+    dots.querySelectorAll('button').forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        current = index;
+        updateCarousel();
+      });
+    });
+
+    let autoInterval = setInterval(() => {
+      const visible = slidesPerView();
+      const maxIndex = Math.max(0, items.length - visible);
+      current = current >= maxIndex ? 0 : current + 1;
+      updateCarousel();
+    }, 4500);
+
+    carousel.addEventListener('mouseenter', () => clearInterval(autoInterval));
+    carousel.addEventListener('mouseleave', () => {
+      autoInterval = setInterval(() => {
+        const visible = slidesPerView();
+        const maxIndex = Math.max(0, items.length - visible);
+        current = current >= maxIndex ? 0 : current + 1;
+        updateCarousel();
+      }, 4500);
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
   }
 
   loadProducts();

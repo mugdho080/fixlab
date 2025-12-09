@@ -4,27 +4,31 @@
     "name": "Shockproof Case – iPhone 13 / 13 Pro",
     "category": "Case",
     "device": "iPhone 13 series",
-    "price": "$39"
+    "price": "$39",
+    "image": "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=900&q=60"
   },
   {
     "id": "glass-iphone-13",
     "name": "9H Tempered Glass – iPhone 13 / 13 Pro",
     "category": "Screen Protector",
     "device": "iPhone 13 series",
-    "price": "$25"
+    "price": "$25",
+    "image": "https://images.unsplash.com/photo-1525909002-1b05e0c869d0?auto=format&fit=crop&w=900&q=60"
   },
   {
     "id": "charger-usb-c",
     "name": "35W Dual USB-C GaN Charger",
     "category": "Charger",
     "device": "USB-C devices",
-    "price": "$59"
+    "price": "$59",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=60"
   },
   {
     "id": "cable-3m",
     "name": "3m Kevlar USB-C to Lightning Cable",
     "category": "Cable",
     "device": "iPhone (Lightning)",
-    "price": "$29"
+    "price": "$29",
+    "image": "https://images.unsplash.com/photo-1518441902117-f4e0f30006d5?auto=format&fit=crop&w=900&q=60"
   }
 ]
