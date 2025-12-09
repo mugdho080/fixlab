@@ -1,0 +1,30 @@
+[
+  {
+    "id": "case-iphone-13",
+    "name": "Shockproof Case – iPhone 13 / 13 Pro",
+    "category": "Case",
+    "device": "iPhone 13 series",
+    "price": "$39"
+  },
+  {
+    "id": "glass-iphone-13",
+    "name": "9H Tempered Glass – iPhone 13 / 13 Pro",
+    "category": "Screen Protector",
+    "device": "iPhone 13 series",
+    "price": "$25"
+  },
+  {
+    "id": "charger-usb-c",
+    "name": "35W Dual USB-C GaN Charger",
+    "category": "Charger",
+    "device": "USB-C devices",
+    "price": "$59"
+  },
+  {
+    "id": "cable-3m",
+    "name": "3m Kevlar USB-C to Lightning Cable",
+    "category": "Cable",
+    "device": "iPhone (Lightning)",
+    "price": "$29"
+  }
+]
